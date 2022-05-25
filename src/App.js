@@ -29,7 +29,7 @@ function App() {
       </div>
       <div>
       {movieData.length?
-      <MovieList movieData={movieData.filter((elm) => (elm.title.toLowerCase().match(search.toLowerCase().trim())) && (elm.rate >= rate))}/>
+      <MovieList movieData={movies.filter((elm) => (elm.title.toLowerCase().match(search.toLowerCase().trim())) && (elm.rate >= rate))}/>
       :<h1>No Movies</h1>
 }
       </div>

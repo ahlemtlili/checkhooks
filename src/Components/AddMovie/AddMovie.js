@@ -1,12 +1,10 @@
 import { Modal, Form, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import './AddMovie.css'
 const AddMovie = ({handleAddMovie }) => {
 
     const [show, setShow] = useState(false);
     const [newMovie, setNewMovie] = useState({
-        id: uuidv4(),
         title: "",
         description: "",
         posterURL: "",
@@ -20,7 +18,6 @@ const AddMovie = ({handleAddMovie }) => {
         event.preventDefault();
         handleAddMovie(newMovie)
         setNewMovie({
-            id: "",
             title: "",
             description: "",
             posterURL: "",
@@ -45,7 +42,6 @@ const AddMovie = ({handleAddMovie }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={mySubmitHandler}>
-                        <Form.Control type="text" name="id" placeholder="ID" onChange={handleChange} required />
                         <Form.Control type="text" name="title" placeholder="Title" onChange={handleChange} required />
                         <Form.Control type="text" name="description" placeholder="Description" onChange={handleChange} required />
                         <Form.Control type="text" name="posterURL" placeholder="PosterURL" onChange={handleChange} required />
