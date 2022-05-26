@@ -22,7 +22,7 @@ function App() {
     <div>
             <h1 className='AppTitle'>Movie App</h1>
       <div className='nav'>
-        <Filter title={searching} rate={rating}/>
+        <Filter searching={searching} rate={rating}/>
       </div>
       <div className='movie-list'> 
       <AddMovie handleAddMovie={handleAddMovie} />

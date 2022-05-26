@@ -1,7 +1,7 @@
 import React from "react";
 import StarRatingComponent from "react-rating-stars-component";
 import "./filter.css";
-const Filter = ({ title, rate }) => {
+const Filter = ({ searching, rate }) => {
   const ratingChanged = (newRating) => {
     rate(newRating);
   };
@@ -12,7 +12,7 @@ const Filter = ({ title, rate }) => {
           type="text"
           placeholder="Search a movie"
           className="searchbox"
-          onChange={(e) => title(e.target.value)}
+          onChange={(e) => searching(e.target.value)}
         />
       </div>
 
