@@ -10,8 +10,8 @@
   padding-bottom: 8px;
   transition: all 1s ease-out;
 }
-
-.x:hover {
+.car:hover {
   border-radius: 10px;
   box-shadow: 12px 12px 2px 1px rgba(56, 56, 114, 0.2);  opacity: 1;
+  width:666px;
 }
